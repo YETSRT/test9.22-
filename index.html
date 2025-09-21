@@ -5,66 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>上传简历 - Resume Upload</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- 左侧内容区域 -->
-        <div class="left-section">
-            <div class="text-content">
-                <h1 class="main-title">Finish!</h1>
-                <h2 class="sub-title">Upload Your Resume</h2>
-                <p class="description">
-                    Upload your resume, the platform will help you parse and optimize, 
-                    you can also skip this step.
-                </p>
-            </div>
-            <div class="image-placeholder">
-                <div class="placeholder-content">
-                    <div class="placeholder-icon">📄</div>
-                    <p>图片待定</p>
-                </div>
-            </div>
+    <div class="main-container">
+        <!-- 背景图片 -->
+        <div class="background-image">
+            <img src="resource/f3b98a45b95147719af263d1e992460c384c379e.png" alt="背景插画" />
+        </div>
+        
+        <!-- 左侧文字内容 -->
+        <div class="left-text">
+            <h1 class="main-title">finish!
+                Upload your resume</h1>
+            <p class="description">
+                Upload your resume, the platform will help you parse and optimize, you can also skip this step.
+            </p>
         </div>
 
-        <!-- 右侧上传区域 -->
-        <div class="right-section">
-            <div class="upload-card">
-                <!-- 第一层：标题 -->
-                <div class="upload-title">
-                    <h3>Upload file</h3>
-                </div>
-
-                <!-- 第二层：文件上传区域 -->
-                <div class="upload-area" id="uploadArea">
-                    <div class="upload-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 2V8H20" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 18V12" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 15L12 12L15 15" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+        <!-- 右侧白色卡片 - 四层结构 -->
+        <div class="upload-card">
+            <!-- 第一层：Upload file 标题 -->
+            <div class="layer-1">
+                <h2 class="upload-title">Upload file</h2>
+            </div>
+            
+            <!-- 第二层：文件上传区域 -->
+            <div class="layer-2">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <img src="resource/Vector.png" alt="上传图标" />
+                        </div>
                     <p class="upload-text">
                         Drag your resume file to this area, or click on the area to select the appropriate file to upload.
                     </p>
                     <input type="file" id="fileInput" accept=".pdf,.doc,.docx" style="display: none;">
                 </div>
+            </div>
 
-                <!-- 第三层：按钮区域 -->
+            <!-- 第三层：按钮区域 -->
+            <div class="layer-3">
                 <div class="button-group">
-                    <button class="btn btn-secondary" id="lastStepBtn">Last step</button>
-                    <button class="btn btn-primary" id="finishBtn">Finish</button>
+                    <button class="btn btn-last-step" id="lastStepBtn">Last step</button>
+                    <button class="btn btn-finish" id="finishBtn">finish</button>
                 </div>
+            </div>
 
-                <!-- 第四层：进度指示器 -->
-                <div class="progress-section">
-                    <div class="progress-line"></div>
+            <!-- 第四层：进度条和步骤指示器 -->
+            <div class="layer-4">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
                     <div class="progress-steps">
                         <div class="step completed">
-                            <div class="step-circle">1</div>
+                            <div class="step-circle">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.5L3.5 6L9 1" stroke="#2A4CFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="step completed">
-                            <div class="step-circle">2</div>
+                            <div class="step-circle">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.5L3.5 6L9 1" stroke="#2A4CFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="step current">
                             <div class="step-circle">3</div>

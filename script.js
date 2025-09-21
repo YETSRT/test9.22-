@@ -75,8 +75,8 @@ function handleDrop(event) {
 function processFile(file) {
     uploadedFile = file;
     
-    // 更新上传区域显示
-    updateUploadArea(file);
+    // 隐藏原始拖拽说明文字
+    hideOriginalText();
     
     // 显示文件信息
     showFileInfo(file);
@@ -88,14 +88,10 @@ function processFile(file) {
     updateFinishButton();
 }
 
-// 更新上传区域显示
-function updateUploadArea(file) {
+// 隐藏原始拖拽说明文字
+function hideOriginalText() {
     const uploadText = uploadArea.querySelector('.upload-text');
-    uploadText.innerHTML = `
-        <strong>已选择文件：</strong><br>
-        ${file.name}<br>
-        <small>大小：${formatFileSize(file.size)}</small>
-    `;
+    uploadText.style.display = 'none';
 }
 
 // 显示文件信息
